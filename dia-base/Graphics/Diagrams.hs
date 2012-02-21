@@ -18,7 +18,7 @@ module Graphics.Diagrams
       -- ** Styles
     , fill, stroke, strokeWidth, fontFamily, link
       -- ** Combining diagrams
-    , union, (<|>)
+    , (<|>), union
     , pack
     ) where
 

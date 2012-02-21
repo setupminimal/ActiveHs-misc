@@ -1,5 +1,5 @@
 name:                activehs-base
-version:             0.2
+version:             0.3.0.1
 category:            Education, Documentation
 synopsis:            Basic definitions for activehs
 description:
@@ -21,7 +21,7 @@ Library
   Exposed-Modules:
     ActiveHs.Base
   Build-Depends:
-    base >= 4.0 && < 4.4,
+    base >= 4.0 && < 4.6,
     QuickCheck >= 2.4 && < 2.5
 
 

@@ -2,6 +2,8 @@
 {-# LANGUAGE OverloadedStrings, PatternGuards #-}
 module Data.Data.GenRep.Doc
     ( Doc
+    , showLitCharInChar
+    , showLitCharInString
     , toDoc
     ) where
 
@@ -15,7 +17,7 @@ import Data.List (intersperse)
 ----------------
 
 -- |'IsString' instance for 'Doc'
-instance IsString Doc where fromString = text
+-- instance IsString Doc where fromString = text
 
 -------------------------
 

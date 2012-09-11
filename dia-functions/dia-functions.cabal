@@ -1,5 +1,5 @@
 name:                dia-functions
-version:             0.2.1.2
+version:             0.2.1.3
 category:            Graphics, Education
 synopsis:            An EDSL for teaching Haskell with diagrams - functions
 description:
@@ -30,10 +30,10 @@ library
   Build-Depends:
     data-pprint >= 0.2 && < 0.3,
     dia-base >= 0.1 && < 0.2,
-    base >= 4.0 && < 4.6,
-    containers >= 0.4 && < 0.5,
+    base >= 4.0 && < 4.7,
+    containers >= 0.4 && < 0.6,
     xhtml >= 3000.2 && < 3000.3,
-    mtl >= 2.0 && < 2.1,
+    mtl >= 2.0 && < 2.2,
     deepseq >= 1.1 && < 1.4
 
 

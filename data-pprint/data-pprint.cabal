@@ -1,5 +1,5 @@
 name:                data-pprint
-version:             0.2.1.4
+version:             0.2.1.5
 category:            Testing, Text
 synopsis:            Prettyprint and compare Data values
 description:
@@ -45,9 +45,13 @@ stability:           beta
 license:             BSD3
 license-file:        LICENSE
 author:              Péter Diviánszky
-maintainer:          divip@aszt.inf.elte.hu
+maintainer:          divipp@gmail.com
 cabal-version:       >=1.2
 build-type:          Simple
+
+source-repository head
+  type:             git
+  location:         https://github.com/divipp/ActiveHs-misc
 
 library
   ghc-options:       -Wall -fno-warn-name-shadowing -fno-warn-orphans

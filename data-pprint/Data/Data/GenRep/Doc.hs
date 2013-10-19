@@ -9,7 +9,6 @@ module Data.Data.GenRep.Doc
 
 import Data.Data.GenRep
 import Data.Char (ord, showLitChar)
-import Data.String
 
 import Text.PrettyPrint.HughesPJ
 import Data.List (intersperse)
@@ -40,20 +39,20 @@ toDoc {-text (<+>) fsep punctuate comma quotes doubleQuotes brackets parens -}
     = showsP 0 
   where
     showsP j x = case x of
-        Hole           -> "…"       -- !!! ragadás
-        ListHole       -> "……"
-        Timeout _      -> "⊥"
-        NestedError e  -> "⊥(" <+> toDoc e <+> ")"
+        Hole           -> text "…"       -- !!! ragadás
+        ListHole       -> text "……"
+        Timeout _      -> text "⊥"
+        NestedError e  -> text "⊥(" <+> toDoc e <+> text ")"
         Error e        -> text e
-        Detail s       -> showParen_ (j > 10) $ "……" <+> showsP 0 s <+> "……"
+        Detail s       -> showParen_ (j > 10) $ text "……" <+> showsP 0 s <+> text "……"
         Constructor (Char c) []         -> quotes $ text $ showLitCharInChar c
-        Constructor Nil []              -> "[]"
+        Constructor Nil []              -> text "[]"
         Constructor (Prefix f) []       -> text f
         Constructor (Infix i f)  [a,b]  -> showParen_ (j > i) $ showsP (i+1) a <+> text f <+> showsP (i+1) b
         Constructor (Infixr i f) [a,b]  -> showParen_ (j > i) $ showsP (i+1) a <+> text f <+> showsP i b
         Constructor (Infixl i f) [a,b]  -> showParen_ (j > i) $ showsP i a <+> text f <+> showsP (i+1) b
         Constructor (Tuple _) xs        -> showParen_ True $ list $ map (showsP 0) xs
-        Constructor Cons [_,_]          -> fsep $ intersperse "++" $ elems x -- showListEnd "[]" "\"" "[" s
+        Constructor Cons [_,_]          -> fsep $ intersperse (text "++") $ elems x -- showListEnd "[]" "\"" "[" s
         Constructor (Prefix f) l        -> showParen_ (j > 10) $ text f <+> fsep (map (showsP 11) l)
         _                               -> error $ "showsP: " ++ show x
 
@@ -84,7 +83,7 @@ toDoc {-text (<+>) fsep punctuate comma quotes doubleQuotes brackets parens -}
         | (es@(_:_), y) <- collectElems x
         = (brackets . list . map (showsP 0) $ es): elems y
     elems (Constructor Nil []) = []
-    elems (Detail x) = ["...", showsP 0 x]
+    elems (Detail x) = [text "...", showsP 0 x]
     elems x = [showsP 0 x]
 
 

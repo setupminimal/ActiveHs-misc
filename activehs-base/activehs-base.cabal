@@ -21,7 +21,7 @@ Library
   Exposed-Modules:
     ActiveHs.Base
   Build-Depends:
-    base >= 4.0 && < 4.7,
-    QuickCheck >= 2.4 && < 2.6
+    base >= 4.0 && < 4.8,
+    QuickCheck >= 2.4 && < 2.8
 
 

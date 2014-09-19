@@ -1,6 +1,7 @@
 -- |Prettyprint and compare 'Data' values.
 module Data.PPrint
     ( pprint
+    , pprintTo
     , (===)
     ) where
 

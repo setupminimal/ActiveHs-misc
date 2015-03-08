@@ -5,7 +5,7 @@ module Control.Exception.Pure
     , catchPureErrorsSafe
     ) where
 
-import Control.DeepSeq (NFData, deepseq)
+import Control.DeepSeq (deepseq)
 import Control.Exception
 
 

@@ -27,7 +27,7 @@ library
     Graphics.Diagrams
 
   Build-Depends:
-    base >= 4.0 && < 4.8,
-    deepseq >= 1.1 && < 1.4
+    base >= 4.0 && < 4.9,
+    deepseq >= 1.1 && < 1.5
 
 

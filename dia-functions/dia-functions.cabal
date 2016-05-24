@@ -1,5 +1,5 @@
 name:                dia-functions
-version:             0.2.1.4
+version:             0.2.1.5
 category:            Graphics, Education
 synopsis:            An EDSL for teaching Haskell with diagrams - functions
 description:

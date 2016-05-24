@@ -68,7 +68,7 @@ library
     System.IO.Parallel
   other-modules:
   build-depends:
-    base >= 4.0 && < 4.9,
+    base >= 4.0 && < 4.10,
     pretty >= 1.0 && < 1.2,
     mtl >= 2.0 && < 2.3,
     deepseq >= 1.1 && < 1.5,

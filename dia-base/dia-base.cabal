@@ -1,5 +1,5 @@
 name:                dia-base
-version:             0.1.1.2
+version:             0.1.1.4
 category:            Graphics, Education
 synopsis:            An EDSL for teaching Haskell with diagrams - data types
 description:
@@ -27,7 +27,7 @@ library
     Graphics.Diagrams
 
   Build-Depends:
-    base >= 4.0 && < 4.9,
+    base >= 4.0 && < 4.10,
     deepseq >= 1.1 && < 1.5
 
 

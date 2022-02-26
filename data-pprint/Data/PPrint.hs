@@ -5,6 +5,8 @@ module Data.PPrint
     , (===)
     ) where
 
+import Prelude hiding ((<>))
+
 import Data.Data.GenRep.Functions (numberErrors)
 import Data.Data.GenRep.Doc (Doc, toDoc)
 import Data.Data.Eval (eval)
